@@ -44,8 +44,8 @@ gitty() {
         commit -m $1
         push
 
-        branchInfo=$(branch -vv)
-        echo "✅ pushed: $branchInfo"
+        echo "✅ pushed:"
+        branch -vv
     fi
 
     echo "🤪 https://www.urbandictionary.com/define.php?term=gitty"
