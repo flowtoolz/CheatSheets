@@ -36,50 +36,11 @@
 
 ## Setup
 
-You could "install" the shell scripts in this section by adding them to a shell script file that you load in ~/.zshrc via `source /path/to/my/shell-customization-script`.
+Have a look at [this shell customization script](shell-customization-scripts/make-the-shell-great-again.sh). It offers some conveniences for git. 
 
-### Don't Repeat Yourself
+You could "install" such a script file by loading it in ~/.zshrc via `source /path/to/my/shell-customization-script`.
 
-These git aliases allow omitting "git " with virtually all git usage:
-
-```bash
-alias status="git status"
-alias gdiff="git diff" # diff would collide with /usr/bin/diff
-alias restore="git restore"
-alias add="git add"
-alias commit="git commit"
-alias push="git push"
-alias branch="git branch"
-alias checkout="git checkout"
-alias pull="git pull"
-alias revert="git revert"
-alias greset="git reset" # reset would collide with /usr/bin/reset
-alias remote="git remote"
-```
-
-### When You're [Gitty](https://www.urbandictionary.com/define.php?term=gitty")
-
-This command allows to accelerate the most basic git use. It adds, commits and pushes all changes:
-
-```bash
-gitty() {
-    if [ "$1" = "" ] # don't do shit without a message
-    then
-        echo "🛑 gimmme some message!!!"
-    else
-        add .
-        commit -m $1
-        push
-
-        remoteBranch=$(branch -r)
-        echo "✅ pushed to:$remoteBranch"
-    fi
-
-    echo "🤪 https://www.urbandictionary.com/define.php?term=gitty"
-}
-```
-
-You use it like so:
+For example, the script offers a function to add, commit and push all changes like so:
 
 ```bash
 gitty "Fix UI bug"
