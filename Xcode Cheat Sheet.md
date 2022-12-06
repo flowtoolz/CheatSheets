@@ -1,13 +1,19 @@
-## Key Commands
+# Xcode Cheat Sheet
 
-- Build:							Cmd B
-- Run:							Cmd R
-- Go to last / next file:		Ctrl Cmd ← / →
-- Jump to current file:		Shift Cmd J
-- Rename in scope:			Ctrl Cmd E
-- Stop building or running:	Cmd Dot
-- Indent Left / Right:			Cmd [ / ]
-- Add API comments:		Option Cmd /
-- Adjust Indentations:		Ctrl I 
-- Comment, Uncomment:	Cmd /
-- Open Quick Help:			Ctrl Cmd 3
+## Keyboard Shortcuts
+
+| Intent | Keys |
+| --- | --- |
+| Build | ⌘B |
+| Run | ⌘R |
+| Go to previous file | ⌃⌘← |
+| Go to next file | ⌃⌘→ |
+| Show current file in navigator (jump to it) | ⇧⌘J |
+| Rename in scope | ⌃⌘E |
+| Stop building or running | ⌘. (Cmd Dot) |
+| Indent left | ⌘[ |
+| Indent right | ⌘] |
+| Add API comments | ⌥⌘/ |
+| Adjust indentations | ⌃I |
+| Comment or uncomment | ⌘/ |
+| Open quick help | ⌃⌘3 |

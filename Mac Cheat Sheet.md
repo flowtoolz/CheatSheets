@@ -1,14 +1,24 @@
-**Special Characters:**
+# Mac Cheat Sheet
 
-*	ü		Option u, u
-*	€		Option Shift 2
-*	–		Option -
-*	—      Option Shift -
-*	…		Option :
-*	ß		Option s
-*	•		Option 8
+## Keyboard Shortcuts
 
-**Keybpoard Shortcuts**
+* Show/Hide hidden files: ⌘⇧. (Cmd Shift Dot)
+* Rename a selected file, folder (or Numbers cell): ⌥⏎
 
-* Show/Hide hidden files: Cmd Shift Dot
-* Rename a file, folder (or Numbers cell): Option Return
+## Special Characters
+
+*	ü		⌥ u, u
+*	€		⌥ ⇧ 2
+*	–		⌥ -
+*	—      ⌥ ⇧ -
+*	…		⌥ :
+*	ß		⌥ s
+*	•		⌥ 8
+
+## Key Symbols
+
+* ⌘
+* ⇧
+* ⌥
+* ⌃
+* ⏎

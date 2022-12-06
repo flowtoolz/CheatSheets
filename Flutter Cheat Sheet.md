@@ -1,9 +1,11 @@
+# Flutter Cheat Sheet
+
 ## Command Line Interface
 
 run app									`flutter run`
 update packages + assets		`flutter pub get`
 
-## Commands While App Runs
+## Key Commands While App Runs
 
 r	Hot reload.
 R	Hot restart.

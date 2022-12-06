@@ -1,4 +1,6 @@
-# Commands
+# Shell Cheat Sheet
+
+## Commands
 
 ### Navigate
 
@@ -63,15 +65,16 @@
 | terminate a program (process) | `killall SomeAppName` |
 | show terminal history | `history` |
 
-# Shortcuts
+## Keyboard Shortcuts
 
 * Clear terminal: ⌘K
 * Increase Font Size: ⌘=
 * Decrease Font Size: ⌘-
-* Cancel a running program/job/command: Ctrl+C
+* Cancel a running program/job/command: ⌃C
 * Show auto completion (only in [iTerm](https://iterm2.com)): ⌘;
+* Open URL (only in [iTerm](https://iterm2.com)): ⌘Click
 
-# Configuration
+## Configuration
 
 * To pimp the shell, adapt [these example scripts](shell-customization-scripts/) and "install" them:
 
