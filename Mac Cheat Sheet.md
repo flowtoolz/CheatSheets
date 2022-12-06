@@ -8,6 +8,7 @@
 *	ß		Option s
 *	•		Option 8
 
-**Finder:**
+**Keybpoard Shortcuts**
 
-* Show/Hide hidden files:	Cmd Shift Dot
+* Show/Hide hidden files: Cmd Shift Dot
+* Rename a file, folder (or Numbers cell): Option Return
