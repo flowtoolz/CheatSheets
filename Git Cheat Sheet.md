@@ -1,3 +1,5 @@
+# Git Cheat Sheet
+
 ## Commands
 
 ### Work
@@ -34,10 +36,13 @@
 
 ## Setup
 
-This shell code offers some conveniences for git:
+You could "install" the shell scripts in this section by adding them to a shell script file that you load in ~/.zshrc via `source /path/to/my/shell-customization-script`.
+
+### Don't Repeat Yourself
+
+These git aliases allow omitting "git " with virtually all git usage:
 
 ```bash
-# git aliases to allow omitting "git " with virtually all git usage
 alias status="git status"
 alias gdiff="git diff" # diff would collide with /usr/bin/diff
 alias restore="git restore"
@@ -50,8 +55,13 @@ alias pull="git pull"
 alias revert="git revert"
 alias greset="git reset" # reset would collide with /usr/bin/reset
 alias remote="git remote"
+```
 
-# command to accelerate simple git use: add, commit and push everything
+### When You're [Gitty](https://www.urbandictionary.com/define.php?term=gitty")
+
+This command allows to accelerate the most basic git use. It adds, commits and pushes all changes:
+
+```bash
 gitty() {
     if [ "$1" = "" ] # don't do shit without a message
     then
@@ -67,6 +77,12 @@ gitty() {
 
     echo "🤪 https://www.urbandictionary.com/define.php?term=gitty"
 }
+```
+
+You use it like so:
+
+```bash
+gitty "Fix UI bug"
 ```
 
 ## Free Clients
