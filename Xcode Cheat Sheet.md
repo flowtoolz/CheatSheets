@@ -2,7 +2,7 @@
 
 ## Keyboard Shortcuts
 
-| Intent | Keys |
+| Intent | Key Command |
 | --- | --- |
 | Build | ⌘B |
 | Run | ⌘R |

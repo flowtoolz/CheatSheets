@@ -67,12 +67,14 @@
 
 ## Keyboard Shortcuts
 
-* Clear terminal: ⌘K
-* Increase Font Size: ⌘=
-* Decrease Font Size: ⌘-
-* Cancel a running program/job/command: ⌃C
-* Show auto completion (only in [iTerm](https://iterm2.com)): ⌘;
-* Open URL (only in [iTerm](https://iterm2.com)): ⌘Click
+| Intent | Key Command |
+| --- | --- |
+| Clear terminal | ⌘K |
+| Increase Font Size | ⌘= |
+| Decrease Font Size | ⌘- |
+| Cancel a running program/job/command | ⌃C |
+| Show auto completion (only in [iTerm](https://iterm2.com)) | ⌘; |
+| Open URL (only in [iTerm](https://iterm2.com)) | ⌘Click |
 
 ## Configuration
 
