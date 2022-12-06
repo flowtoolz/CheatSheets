@@ -22,7 +22,7 @@ precmd() {
 
 # git aliases to allow omitting "git " with virtually all git usage
 alias status="git status"
-alias gdiff="git diff" # diff would collide with /usr/bin/diff
+alias diff="git diff" # this masks /usr/bin/diff
 alias restore="git restore"
 alias add="git add"
 alias commit="git commit"
@@ -31,7 +31,7 @@ alias branch="git branch"
 alias checkout="git checkout"
 alias pull="git pull"
 alias revert="git revert"
-alias greset="git reset" # reset would collide with /usr/bin/reset
+alias reset="git reset" # this masks /usr/bin/reset
 alias remote="git remote"
 
 # command to accelerate the most basic git use: add, commit and push all changes
