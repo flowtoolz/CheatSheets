@@ -1,6 +1,6 @@
 #! /bin/zsh
 
-# You may use this script as a template to make any shell great again. It should not reference personal folders.
+# You may use this script as a template to make a shell great again. It should not reference personal folders.
 # "Install" this script file by adding "source path/to/this/file" to your ~/.zshrc
 
 # list folder content with useful options 
