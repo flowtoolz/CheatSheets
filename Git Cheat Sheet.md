@@ -32,6 +32,43 @@
 | push and set the "upstream" remote branch (track it) | `git push -u develop` |
 | push local commits to tracked remote branch | `git push` |
 
+## Setup
+
+This shell code offers some conveniences for git:
+
+```bash
+# git aliases to allow omitting "git " with virtually all git usage
+alias status="git status"
+alias gdiff="git diff" # diff would collide with /usr/bin/diff
+alias restore="git restore"
+alias add="git add"
+alias commit="git commit"
+alias push="git push"
+alias branch="git branch"
+alias checkout="git checkout"
+alias pull="git pull"
+alias revert="git revert"
+alias greset="git reset" # reset would collide with /usr/bin/reset
+alias remote="git remote"
+
+# command to accelerate simple git use: add, commit and push everything
+gitty() {
+    if [ "$1" = "" ] # don't do shit without a message
+    then
+        echo "🛑 gimmme some message!!!"
+    else
+        add .
+        commit -m $1
+        push
+
+        remoteBranch=$(branch -r)
+        echo "✅ pushed to:$remoteBranch"
+    fi
+
+    echo "🤪 https://www.urbandictionary.com/define.php?term=gitty"
+}
+```
+
 ## Free Clients
 
 * [Sourcetree](https://www.sourcetreeapp.com)
