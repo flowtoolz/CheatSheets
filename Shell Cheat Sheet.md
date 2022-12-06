@@ -73,61 +73,32 @@
 
 # Configuration
 
-* ⚠️ How to persist and load the shell customizations listed in this section:
+* To pimp the shell, adapt [these example scripts](shell-customization-scripts/) and "install" them:
 
-  * Add them to [either](https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout) ~/.zshrc (Z-Shell Run Control) or ~/.zprofile (Z-Shell Profile)
-  * And to load the changes, "resource" the respective file:
-
+  1. Add something like this to [either](https://unix.stackexchange.com/questions/71253/what-should-shouldnt-go-in-zshenv-zshrc-zlogin-zprofile-zlogout) ~/.zshrc (Z-Shell Run Control) or ~/.zprofile (Z-Shell Profile):
+  
+  ```bash
+  # load shell customization
+  scriptsFolder="/Users/seb/Desktop/GitHub Repos/CheatSheets/shell-customization-scripts"
+  source "$scriptsFolder/make-the-shell-great-again.sh"
+  source "$scriptsFolder/personalize-the-shell.sh"
+  ```
+  
+  2. Load the change immediately by "re-sourcing" the respective file:
+  
   ```bash
   source ~/.zshrc
   source ~/.zprofile
   ```
+  
+* Open an in Finder selected folder in a new Terminal or iTerm tab via a shortcut:
 
-* See a clean, helpful, nice command line prompt:
-
-  ```bash
-  export PROMPT='🍏%1~: '
-  ```
-
-* Quickly access the iCloud drive directory:
-
-  ```bash
-  export cloud="/Users/seb/Library/Mobile Documents/com~apple~CloudDocs"
-  alias cdc="cd '$cloud'"
-  ```
-
-  Then you can for example `ls $cloud`, `cd $cloud` and `cdc`.
-
-* Quickly access your repositories directory (adjust the path):
-
-  ```bash
-  export repos="/Users/seb/Desktop/GitHub Repos"
-  alias cdr="cd '$repos'"
-  ```
-
-  Then you can for example `ls $repos`, `cd $repos` and `cdr`.
-
-* Quickly list directory content with all the useful options:
-
-  ```bash
-  alias lsl="ls -Fahl"
-  ```
-
-  Then you can `lsl Some/Folder`.
-
-* Backup Flowlist data via existing script:
-
-  ```bash
-  alias bfl="'$cloud/FLOWLIST BACKUP/backup-beta.sh'"
-  ```
-
-* Quickly open the in Finder selected folder in a new Terminal or iTerm tab via a shortcut:
-    1. Go to System Settings / Keyboard / Keyboard Shortcuts... / Services / Files and Folders
-    2. Find the shortcut you want:
-        * "New Terminal Tab at Folder" for Terminal
-        * "New iTerm2 Tab Here" for iTerm
-    3. Double click on the key command (or on "none" if there is none)
-    4. Press Ctrl+T (Shift+Cmd+T for example didn't work since it's used by Finder)
+  1. Go to System Settings / Keyboard / Keyboard Shortcuts... / Services / Files and Folders
+  2. Find the shortcut you want:
+      * "New Terminal Tab at Folder" for Terminal
+      * "New iTerm2 Tab Here" for iTerm
+  3. Double click on the key command (or on "none" if there is none)
+  4. Press Ctrl+T (Shift+Cmd+T for example didn't work since it's used by Finder)
 
 * Clearly see which working directories are opened in the tabs:
 
