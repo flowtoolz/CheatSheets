@@ -12,7 +12,7 @@ alias paths="echo $PATH | tr : '\n'"
 # nice prompt
 export PROMPT='🍏%1~: '
 
-# working directory as tab title in iTerm
+# working directory as tab title in iTerm (https://iterm2.com)
 DISABLE_AUTO_TITLE="true"
 
 precmd() {
@@ -20,7 +20,7 @@ precmd() {
   echo -ne "\e]1;${PWD##*/}\a"
 }
 
-# git aliases to allow omitting "git " with virtually all git usage
+# aliases that allow omitting "git " with virtually all git usage
 alias status="git status"
 alias diff="git diff" # this masks /usr/bin/diff
 alias restore="git restore"
@@ -36,15 +36,20 @@ alias remote="git remote"
 
 # command to accelerate the most basic git use: add, commit and push all changes
 gitty() {
-    if [ "$1" = "" ] # don't do shit without a message
+    changes=$(diff)
+
+    if [ "$changes" = "" ] # don't do shit without unstaged changes
     then
-        echo "🛑 gimmme some message!!!"
+        echo "🛑 No unstaged changes!!!"
+    elif [ "$1" = "" ] # don't do shit without a message
+    then
+        echo "🛑 Write a commit message!!!"
     else
         add .
         commit -m $1
         push
 
-        echo "✅ pushed:"
+        echo "✅ Pushed:"
         branch -vv
     fi
 
