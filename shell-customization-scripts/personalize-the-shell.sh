@@ -18,6 +18,7 @@ bfl() {
     # define where to store the backup
     destinationFolder="$cloud/FLOWLIST BACKUP/Flowlist-Beta/"
 
+    # update the destination folder, deleting files that aren't anymore in the source folder
     rsync -a --delete $sourceFolder $destinationFolder
 }
 
