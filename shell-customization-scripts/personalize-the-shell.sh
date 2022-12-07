@@ -12,20 +12,22 @@ alias cdr="cd '$repos'"
 
 # backup Flowlist (http://www.flowlistapp.com)
 bfl() {
-    # remember the working directory where we started off
-    workingDirectory=$(pwd) 
-
     # define what to backup
-    dataFolder="/Users/seb/Library/Containers/com.flowtoolz.flowlist/Data/Documents"
-    folderToBackup="Flowlist-Beta"
+    folderToBackup="/Users/seb/Library/Containers/com.flowtoolz.flowlist/Data/Documents/Flowlist-Beta"
 
     # define where to store the backup
     backupFolder="$cloud/FLOWLIST BACKUP"
 
-    # create the backup
-    cd $dataFolder
-    zip -r "$backupFolder/$folderToBackup" $folderToBackup
+    # copy the folder to backup to the backup folder
+    cp -R $folderToBackup $backupFolder
+}
 
-    # go back to the working directory where we started off
-    cd $workingDirectory 
+find-flowlist-duplicates() {
+    flowlistItemsFolder="/Users/seb/Library/Containers/com.flowtoolz.flowlist/Data/Documents/Flowlist-Beta/Items"
+    find $flowlistItemsFolder -name "* *.json"
+}
+
+delete-flowlist-duplicates() {
+    flowlistItemsFolder="/Users/seb/Library/Containers/com.flowtoolz.flowlist/Data/Documents/Flowlist-Beta/Items"
+    find $flowlistItemsFolder -name "* *.json" -delete
 }
