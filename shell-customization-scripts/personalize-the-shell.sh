@@ -13,16 +13,12 @@ alias cdr="cd '$repos'"
 # backup Flowlist (http://www.flowlistapp.com)
 bfl() {
     # define what to backup
-    folderToBackup="/Users/seb/Library/Containers/com.flowtoolz.flowlist/Data/Documents/Flowlist-Beta"
+    sourceFolder="/Users/seb/Library/Containers/com.flowtoolz.flowlist/Data/Documents/Flowlist-Beta/"
 
     # define where to store the backup
-    backupFolder="$cloud/FLOWLIST BACKUP"
+    destinationFolder="$cloud/FLOWLIST BACKUP/Flowlist-Beta/"
 
-    # remove the old backup but supress error output in case there is no old backup
-    rm -R "$backupFolder/Flowlist-Beta" 2>/dev/null
-
-    # copy the folder we wanna backup to the backup folder
-    cp -R $folderToBackup $backupFolder
+    rsync -a --delete $sourceFolder $destinationFolder
 }
 
 find-flowlist-duplicates() {
