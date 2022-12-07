@@ -33,6 +33,7 @@ alias pull="git pull"
 alias revert="git revert"
 alias reset="git reset" # this masks /usr/bin/reset
 alias remote="git remote"
+alias log="git log" # this masks /usr/bin/log
 
 # command to accelerate the most basic git use: add, commit and push all changes
 gitty() {
