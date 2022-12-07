@@ -18,7 +18,10 @@ bfl() {
     # define where to store the backup
     backupFolder="$cloud/FLOWLIST BACKUP"
 
-    # copy the folder to backup to the backup folder
+    # remove the old backup but supress error output in case there is no old backup
+    rm -R "$backupFolder/Flowlist-Beta" 2>/dev/null
+
+    # copy the folder we wanna backup to the backup folder
     cp -R $folderToBackup $backupFolder
 }
 
