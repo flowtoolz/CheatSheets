@@ -26,7 +26,15 @@
 | commit staged changes | `git commit -m "Add feature"` |
 | stage (add) [tracked](https://www.google.com/search?q=git+commit+%22-a%22) changes, then commit them | `git commit -am "Add feature"` |
 
-### Push
+### Branch
+
+| Intent | Example Command |
+| - | - |
+| see branches | `git branch` |
+| create branch (no switch) | `git branch develop` |
+| switch to branch | `git switch develop` |
+
+### Sync
 
 | Intent | Example Command |
 | - | - |
