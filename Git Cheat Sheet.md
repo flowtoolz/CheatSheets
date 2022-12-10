@@ -33,6 +33,10 @@
 | see branches | `git branch` |
 | create branch (no switch) | `git branch develop` |
 | switch to branch | `git switch develop` |
+| create branch and switch to it | `git switch -c develop` |
+| rename ("move") current branch | `git branch -m new-branch-name` |
+| delete some other branch | `git branch -d develop` |
+| delete some other branch with unmerged changes (force delete) | `git branch -D develop` |
 
 ### Sync
 
@@ -41,6 +45,7 @@
 | push local commits to specific remote branch | `git push develop`   |
 | push and set the "upstream" remote branch (track it) | `git push -u develop` |
 | push local commits to tracked remote branch | `git push` |
+|  |  |
 
 ## Setup
 
