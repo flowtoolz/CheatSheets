@@ -52,7 +52,7 @@ gitty() {
         push
 
         echo "✅ Pushed:"
-        branch -vv
+        log --oneline -1
     fi
 
     echo "🤪 https://www.urbandictionary.com/define.php?term=gitty"
