@@ -20,7 +20,7 @@ precmd() {
   echo -ne "\e]1;${PWD##*/}\a"
 }
 
-# aliases that allow omitting "git " with virtually all git usage
+# aliases that allow omitting "git " with git commands
 alias status="git status"
 alias diff="git diff" # this masks /usr/bin/diff
 alias restore="git restore"
@@ -36,8 +36,9 @@ alias revert="git revert"
 alias reset="git reset" # this masks /usr/bin/reset
 alias remote="git remote"
 alias log="git log" # this masks /usr/bin/log
+alias config="git config"
 
-# command to accelerate the most basic git use: add, commit and push all changes
+# accelerate most basic git use: add, commit and push all unstaged changes
 gitty() {
     changes=$(diff)
 
