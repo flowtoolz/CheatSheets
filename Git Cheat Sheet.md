@@ -2,54 +2,54 @@
 
 ## Commands
 
-As a useful baseline, the listed commands apply to the whole repo folder. But many of them can also specify single files.
+* As a useful baseline, the listed commands apply to the whole repo folder. But many of them can also specify files.
+* For brevity, example commands omit the redundant "`git `". Read [Setup](#Setup) on how to actually avoid typing that.
 
 ### Work
 
 | Intent | Example Command |
 | - | - |
-| see overview of repo | `git status` |
-| inspect unstaged changes | `git diff` |
-| discard unstaged changes | `git restore .` |
+| see overview of repo | `status` |
+| inspect unstaged changes | `diff` |
+| discard unstaged changes | `restore .` |
 
 ### Stage
 
 | Intent | Example Command |
 | - | - |
-| stage changes | `git add .` |
-| inspect staged changes | `git diff --staged` |
-| inspect staged & unstaged changes | `git diff HEAD` |
-| unstage staged changes | `git restore --staged .` |
+| stage changes | `add .` |
+| inspect staged changes | `diff --staged` |
+| inspect staged & unstaged changes | `diff HEAD` |
+| unstage staged changes | `restore --staged .` |
 
 ### Commit
 
 | Intent | Example Command |
 | - | - |
-| commit staged changes | `git commit -m "Add feature"` |
-| stage (add) [tracked](https://www.google.com/search?q=git+commit+%22-a%22) changes, then commit them | `git commit -am "Add feature"` |
+| commit staged changes | `commit -m "Add feature"` |
+| stage (add) [tracked](https://www.google.com/search?q=git+commit+%22-a%22) changes, then commit them | `commit -am "Add feature"` |
 
 ### Branch
 
 | Intent | Example Command |
 | - | - |
-| see branches | `git branch` |
-| create branch (no switch) | `git branch develop` |
-| switch to branch | `git switch develop` |
-| create branch and switch to it | `git switch -c develop` |
-| rename ("move") current branch | `git branch -m new-branch-name` |
-| merge some other branch into current HEAD | `git merge ` |
-| delete some other branch | `git branch -d develop` |
-| delete some other branch with unmerged changes (force delete) | `git branch -D develop` |
+| see branches | `branch` |
+| create branch (no switch) | `branch develop` |
+| switch to branch | `switch develop` |
+| create branch and switch to it | `switch -c develop` |
+| rename ("move") current branch | `branch -m new-branch-name` |
+| merge some other branch into current HEAD | `merge other-branch` |
+| delete some other branch | `branch -d develop` |
+| delete some other branch with unmerged changes (force delete) | `branch -D develop` |
 
 ### Sync
 
 | Intent | Example Command |
 | - | - |
-| clone remote repo (creates repo folder in working directory) | git clone https://github.com/flowtoolz/CheatSheets |
-| push local commits to specific remote branch | `git push develop`   |
-| push and set the "upstream" remote branch (track it) | `git push -u develop` |
-| push local commits to tracked remote branch | `git push` |
-|  |  |
+| clone remote repo (creates repo folder in working directory) | `clone https://github.com/flowtoolz/CheatSheets` |
+| push local commits to specific remote branch | `push develop`   |
+| push and set the "upstream" remote branch (track it) | `push -u develop` |
+| push local commits to tracked remote branch | `push` |
 
 ## Conflicts
 
@@ -77,7 +77,7 @@ The script offers two major conveniences:
     gitty "Fix UI bug"
     ```
     
-2. Aliases that allow omitting "git " with all git commands
+2. Aliases that allow omitting "``git ``" with all git commands
 
 ## Free Clients
 
