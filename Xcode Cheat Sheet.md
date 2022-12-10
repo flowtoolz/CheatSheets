@@ -17,3 +17,4 @@
 | Adjust indentations | ⌃I |
 | Comment or uncomment | ⌘/ |
 | Open quick help | ⌃⌘3 |
+| Clear console | ⌘K |
