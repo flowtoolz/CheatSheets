@@ -52,8 +52,8 @@ gitty() {
         commit -m $1
         push
 
-        echo "✅ Pushed:"
-        log --oneline -1
+        lastCommit=$(log --oneline -1)
+        echo "✅ Pushed $lastCommit"
     fi
 
     echo "🤪 https://www.urbandictionary.com/define.php?term=gitty"
