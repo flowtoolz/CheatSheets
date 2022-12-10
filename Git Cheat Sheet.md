@@ -65,6 +65,8 @@
 
 ## Setup
 
+### Shell
+
 Have a look at [this shell customization script](shell-customization-scripts/make-the-shell-great-again.sh). It offers some conveniences for git. 
 
 You could "install" such a script file by loading it in ~/.zshrc via `source /path/to/my/shell-customization-script`.
@@ -76,8 +78,12 @@ The script offers two major conveniences:
     ```bash
     gitty "Fix UI bug"
     ```
-    
+
 2. Aliases that allow omitting "``git ``" with all git commands
+
+### Font
+
+* To have nice code-oriented ligatures, use the [Fira Code font](https://fonts.google.com/specimen/Fira+Code) and (in iTerm) activate ligatures.
 
 ## Free Clients
 
