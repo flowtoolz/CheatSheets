@@ -10,15 +10,15 @@
 
 ## Special Characters
 
-| Character | Key Command |
-| --------- | ----------- |
-| ü         | ⌥u, u       |
-| €         | ⌥⇧2         |
-| –         | ⌥-          |
-| —         | ⌥⇧-         |
-| …         | ⌥:          |
-| ß         | ⌥s          |
-| •         | ⌥8          |
+| Character | Key Command          |
+| --------- | -------------------- |
+| ü         | ⌥u and then type "u" |
+| €         | ⌥⇧2                  |
+| –         | ⌥-                   |
+| —         | ⌥⇧-                  |
+| …         | ⌥:                   |
+| ß         | ⌥s                   |
+| •         | ⌥8                   |
 
 ## Key Symbols
 
