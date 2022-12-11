@@ -31,6 +31,7 @@ alias branch="git branch"
 alias merge="git merge"
 alias switch="git switch"
 alias checkout="git checkout"
+alias fetch="git fetch"
 alias pull="git pull"
 alias revert="git revert"
 alias reset="git reset" # this masks /usr/bin/reset
