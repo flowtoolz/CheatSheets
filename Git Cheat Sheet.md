@@ -52,7 +52,7 @@
 | push local commits to tracked remote branch | `push` |
 | push local commits to specific remote branch | `push develop`   |
 | push and set the "upstream" remote branch (track it) | `push -u develop` |
-| fetch information about remote changes                       | `fetch`                                          |
+| download new remote commits (without applying)               | `fetch`                                          |
 |                                                              |                                                  |
 
 ## Conflicts
