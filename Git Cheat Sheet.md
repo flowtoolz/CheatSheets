@@ -33,7 +33,8 @@
 
 | Intent | Example Command |
 | - | - |
-| see branches | `branch` |
+| see local branches | `branch` |
+| see remote branches | `branch -r` |
 | create branch (no switch) | `branch develop` |
 | switch to branch | `switch develop` |
 | create branch and switch to it | `switch -c develop` |
@@ -47,9 +48,12 @@
 | Intent | Example Command |
 | - | - |
 | clone remote repo (creates repo folder in working directory) | `clone https://github.com/flowtoolz/CheatSheets` |
+| switch to new local branch tracking other remote branch | `switch remote-branch-name` |
+| push local commits to tracked remote branch | `push` |
 | push local commits to specific remote branch | `push develop`   |
 | push and set the "upstream" remote branch (track it) | `push -u develop` |
-| push local commits to tracked remote branch | `push` |
+| fetch information about remote changes                       | `fetch`                                          |
+|                                                              |                                                  |
 
 ## Conflicts
 
