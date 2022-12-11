@@ -47,7 +47,7 @@
 
 | Intent | Example Command |
 | - | - |
-| clone remote repo (creates repo folder in working directory) | `clone https://github.com/flowtoolz/CheatSheets` |
+| clone remote repo (creates folder for whole repo) | `clone https://github.com/flowtoolz/CheatSheets` |
 | switch to new local branch tracking other remote branch | `switch remote-branch-name` |
 | push local commits to tracked remote branch | `push` |
 | push local commits to specific remote branch | `push develop`   |
