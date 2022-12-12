@@ -5,7 +5,7 @@
 | Intent | Key Command |
 | --------- | ----------- |
 | Rename a selected file, folder or Numbers cell | ⌥⏎ |
-| Delete a selected file or folder | ⌘⌫ |
+| Delete a selected file, folder or email | ⌘⌫ |
 | Show/hide hidden files | ⌘⇧. (Cmd Shift Dot) |
 
 ## Special Characters (US Keyboard)
