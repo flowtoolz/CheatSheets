@@ -8,11 +8,11 @@
 | Delete a selected file or folder | ⌘⌫ |
 | Show/hide hidden files | ⌘⇧. (Cmd Shift Dot) |
 
-## Special Characters
+## Special Characters (US Keyboard)
 
 | Character | Key Command          |
 | --------- | -------------------- |
-| ü         | ⌥u and then type "u" |
+| ä         | ⌥u and then type "a" |
 | €         | ⌥⇧2                  |
 | –         | ⌥-                   |
 | —         | ⌥⇧-                  |
