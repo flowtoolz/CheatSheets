@@ -1,5 +1,9 @@
 # Flutter Cheat Sheet
 
+## VS Code + Flutter Extension
+
+* Show intentions/refactorings for symbol at cursor: ⌘.
+
 ## Command Line Interface
 
 * run app: `flutter run`
