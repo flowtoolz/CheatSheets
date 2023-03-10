@@ -3,6 +3,7 @@
 ## VS Code + Flutter Extension
 
 * Show intentions/refactorings for symbol at cursor: ⌘.
+* Jump to definition (including open-source flutter types): ⌘ Click
 
 ## Command Line Interface
 
