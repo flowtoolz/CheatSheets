@@ -4,14 +4,16 @@
 
 * As a useful baseline, the listed commands apply to the whole repo folder. But many of them can also specify files.
 * For brevity, example commands omit the redundant "`git `". Read [Setup](#Setup) on how to actually avoid typing that.
+* Note that the default name of remotes is "origin". That's not a git command but a changable name specific to the local copy of the repository. 
 
-### Work
+### Inspect & Work
 
 | Intent | Example Command |
 | - | - |
 | see overview of repo | `status` |
 | inspect unstaged changes | `diff` |
 | discard unstaged changes | `restore .` |
+| print infos about the tracked remote (verbose) | `remote -v` |
 
 ### Stage
 
@@ -29,7 +31,7 @@
 | commit staged changes | `commit -m "Add feature"` |
 | stage (add) [tracked](https://www.google.com/search?q=git+commit+%22-a%22) changes, then commit them | `commit -am "Add feature"` |
 
-### Branch
+### Branch & Merge
 
 | Intent | Example Command |
 | - | - |
@@ -47,13 +49,15 @@
 
 | Intent | Example Command |
 | - | - |
-| clone remote repo (creates folder for whole repo) | `clone https://github.com/flowtoolz/CheatSheets` |
+| clone remote repo (creates folder for whole repo) | `clone repo-url` |
+| add remote (for example the original repo of a fork) | `remote add remote-name repo-url` |
 | switch to new local branch tracking other remote branch | `switch remote-branch-name` |
 | push local commits to tracked remote branch | `push` |
-| push local commits to specific remote branch | `push develop`   |
-| push and set the "upstream" remote branch (track it) | `push -u develop` |
-| update local representation of remote branches | `fetch`                                          |
+| push local commits to specific remote branch | `push remote-branch-name` |
+| push and set the "upstream" remote branch (track it) | `push -u remote-branch-name` |
+| update local representation of tracked remote branche | `fetch`                                          |
 | merge tracked remote branch into current branch | `pull` |
+| merge specific remote branch into current branch | `pull remote-name branch-name` |
 
 ## Conflicts
 
@@ -66,6 +70,13 @@
 # <the conflicting code on the other branch we are merging into the HEAD>
 >>>>>>> name-of-other-branch
 ```
+
+## GitHub Features
+
+Some common GitHub workflows rely on features that are **not** part of git but of GitHub itself, for example:
+
+* Pull Requests
+* Forks
 
 ## Setup
 
