@@ -9,6 +9,7 @@
 
 * run app: `flutter run`
 * update packages + assets: `flutter pub get`
+* run single dart file that has a main function: `dart path/to/my_dartfile.dart`
 
 ## Key Commands While App Runs
 
