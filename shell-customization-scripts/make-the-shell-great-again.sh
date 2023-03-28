@@ -20,6 +20,9 @@ precmd() {
   echo -ne "\e]1;${PWD##*/}\a"
 }
 
+# make VS Code the default editor, assuming the VS Code command is installed
+export EDITOR="code -w" 
+
 # aliases that allow omitting "git " with git commands
 alias status="git status"
 alias diff="git diff" # this masks /usr/bin/diff
@@ -30,6 +33,9 @@ alias push="git push"
 alias branch="git branch"
 alias clone="git clone"
 alias merge="git merge"
+alias rebase="git rebase"
+alias reflog="git reflog"
+alias tag="git tag"
 alias switch="git switch"
 alias checkout="git checkout"
 alias fetch="git fetch"
@@ -39,6 +45,7 @@ alias reset="git reset" # this masks /usr/bin/reset
 alias remote="git remote"
 alias log="git log" # this masks /usr/bin/log
 alias config="git config"
+alias init="git init"
 
 # accelerate most basic git use: add, commit and push all unstaged changes
 gitty() {

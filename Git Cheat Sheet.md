@@ -4,16 +4,37 @@
 
 * As a useful baseline, the listed commands apply to the whole repo folder. But many of them can also specify files.
 * For brevity, example commands omit the redundant "`git `". Read [Setup](#Setup) on how to actually avoid typing that.
-* Note that the default name of remotes is "origin". That's not a git command but a changable name specific to the local copy of the repository. 
+* Note that the default name of remotes is "origin". That's not a git term but a changable name specific to the local copy of the repository. 
+
+### Setup Repository
+
+| Intent | Example Command |
+| - | - |
+| turn working directory into git repo (creates .git directory) | `init` |
+| see global user name (from global git config file) | `config user.name` |
+| see local user name (from local repo git config file) | `config --local user.name` |
+| see the tracked remotes (verbose) | `remote -v` |
+| set upstream (tracked) remote branch for current local branch | `branch -u remote-name/branch-name` |
 
 ### Inspect & Work
 
 | Intent | Example Command |
 | - | - |
 | see overview of repo | `status` |
+| see all commits in compact form | `log --oneline` |
+| see last N commits in compact form | `log --oneline -N` |
 | inspect unstaged changes | `diff` |
 | discard unstaged changes | `restore .` |
-| print infos about the tracked remote (verbose) | `remote -v` |
+| see all tags | `tag` |
+| see (list) specific tags filtered by a search pattern (like "v3.*") | `tag -l search-pattern` |
+| go to specific tag (detaching HEAD ...) | `checkout tag-name` |
+| inspect changes between tags | `diff tag-name other-tag-name` |
+| add tag to HEAD (to last commit on current branch) | `tag tag-name` |
+| add tag to specific commit | `tag tag-name commit-hash` |
+| delete a tag | `tag -d tag-name` |
+| add annotated tag to HEAD | `tag -a tag-name` |
+| show annotations of an annotated tag | `show tag-name` |
+| show reference logs | `reflog show` |
 
 ### Stage
 
@@ -53,11 +74,19 @@
 | add remote (for example the original repo of a fork) | `remote add remote-name repo-url` |
 | switch to new local branch tracking other remote branch | `switch remote-branch-name` |
 | push local commits to tracked remote branch | `push` |
+| push local tags to tracked remote branch | `push --tags` |
+| push a specific tag to a remote | `push remote-name tag-name` |
 | push local commits to specific remote branch | `push remote-branch-name` |
 | push and set the "upstream" remote branch (track it) | `push -u remote-branch-name` |
 | update local representation of tracked remote branche | `fetch`                                          |
 | merge tracked remote branch into current branch | `pull` |
 | merge specific remote branch into current branch | `pull remote-name branch-name` |
+| rebase the current branch onto another (often its root-) branch | `rebase other-branch-name` |
+| abort a partial (because conflicting) rebase | `rebase --abort` |
+| continue a partial (conflicting) rebase after resolving the conflicts | `rebase --continue` |
+| interactively rebase (change) the last N commits of the current branch | `rebase -i HEAD˜N` |
+
+* Rebasing a child branch onto its parent branch will not create commits for potential previous merge commits where the parent had been merged into the child to keep the child up to date. But then where do the potential changes go that could have been made in the merge commits, in particular if those merges involved resolving conflicts?
 
 ## Conflicts
 

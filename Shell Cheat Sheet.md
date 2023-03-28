@@ -30,6 +30,7 @@
 | search in file | `less README.md`, then `/faq` |
 | open file in default app | `open README.md` |
 | open working directory in Finder | `open .` |
+| open working directory in VS Code | `code .` |
 
 ### Modify Files & Folders
 
