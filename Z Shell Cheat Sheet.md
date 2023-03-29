@@ -1,4 +1,6 @@
-# Shell Cheat Sheet
+# Z Shell Cheat Sheet
+
+* [Wikipedia article about Z Shell](https://en.wikipedia.org/wiki/Z_shell)
 
 ## Commands
 
