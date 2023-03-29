@@ -1,6 +1,7 @@
 # Mac Dev Cheat Sheets
 * [Xcode](Xcode%20Cheat%20Sheet.md)
 * [Swift](Swift%20Cheat%20Sheet.md)
+* [xcrun](xcrun.md)
 * [Git](Git%20Cheat%20Sheet.md)
 * [Mac](Mac%20Cheat%20Sheet.md)
 * [Shell](Shell%20Cheat%20Sheet.md)

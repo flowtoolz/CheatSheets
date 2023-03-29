@@ -6,7 +6,7 @@
 
 | Intent | Example Command |
 | - | - |
-| open manual for a command | `man ls` |
+| open manual for a command | `man <command>` |
 | print working directory | `pwd` |
 | change directory | `cd Some/Directory` |
 | change director to home | `cd` |
