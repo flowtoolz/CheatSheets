@@ -6,11 +6,9 @@ Code Signing protects against any tampering with an app, be it on the developer 
 
 ## Overview
 
-An evolving overview of the whole fuckery:
+For illustration, we look at a typical (and idealized) scenario in which a team develops one app in the context of one company, and each team member develops only that one app:
 
 ![](code-signing/Code_Signing_Fuckery.jpg)
-
-The diagram illustrates a typical context in which a team develops one app in context of some company.
 
 * Developer Account
     * identified by a Team ID

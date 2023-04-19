@@ -18,7 +18,7 @@
 
 ### Authentication: Basics
 
-Example use cases: Establishing a secure connection, Signing content
+(for establishing a secure connection, signing content ...)
 
 * [Symmetric Encryption](https://en.wikipedia.org/wiki/Symmetric-key_algorithm)
 
@@ -46,31 +46,31 @@ Example use cases: Establishing a secure connection, Signing content
 
         1.	Extract the identity of the CA that issued the certificate from the certificate itself.
 
-        2.	Look up the public key of the CA in the client's trusted store of CAs. This store typically contains the public keys of well-known CAs, such as those included in popular web browsers.
+        2.	Look up the public key of the CA in the client's trusted store of CAs. This store contains the public keys of well-known CAs, which are included in browsers. (might involve checking intermediate certificates in the [chain of trust](https://en.wikipedia.org/wiki/Chain_of_trust) all the way up to a root certificate)
         3.	Use the CA's public key to verify the digital signature on the server's certificate. (has nothing to do with decrypting anything but is its own type of math magic)
-        4.	If the verification is successful, the client can trust the server's certificate and establish a secure communication channel with the server using the public key contained in the certificate.
+        4.	If the verification is successful, the client can trust the server's certificate and establish a secure communication
 
-* [Certificate Authority](https://en.wikipedia.org/wiki/Certificate_authority)
-
+* [CA](https://en.wikipedia.org/wiki/Certificate_authority) = Certificate Authority
     * 3rd party vouching for the authenticity of someone's certificate / public key
-
+    
 * [Signing / Signature](https://en.wikipedia.org/wiki/Digital_signature)
-
     * what makes any certificate work is the signature it contains
     * based on asymmetric encryption
     * proofs the sender/server is who it claims to be (authenticity)
     * signed certificates are necessary to prevent man-in-the-middle attacks
-
-* [Root Certificate](https://en.wikipedia.org/wiki/Root_certificate)
-
+    
+* [Root Certificate](https://en.wikipedia.org/wiki/Root_certificate) a.k.a. Trust Anchor
     * preinstalled on the device / operating system
     * required for ultimate proof that someone is who he claims to be, see [Chain of trust](https://en.wikipedia.org/wiki/Chain_of_trust)
-    * [YouTube video](https://www.youtube.com/watch?v=E_wX40fQwEA)
-
+    * See [Computerphile: Secure Web Browsing (YouTube video)](https://www.youtube.com/watch?v=E_wX40fQwEA)
+    
 * [PKI](https://en.wikipedia.org/wiki/Public_key_infrastructure) = Public Key Infrastructure
 
 ### Authentication: Protocols
 
+* [HTTPS](https://en.wikipedia.org/wiki/HTTPS) = HTTP Secure
+    * HTTP encrypted via TLS
+    
 * [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) = Transport Layer Security
     * most widely used protocol for secure client-server communication
     * sits on top of TCP and can be used for many things (HTTP, email ...)
@@ -105,8 +105,6 @@ Example use cases: Establishing a secure connection, Signing content
 
 ### Authentication: Specific Topics
 
-* [HTTPS](https://en.wikipedia.org/wiki/HTTPS) = HTTP Secure
-    * HTTP encrypted via TLS
 * [2FA](https://en.wikipedia.org/wiki/Multi-factor_authentication) = 2-Factor Authentication
     * Additional factor like a code via SMS or authenticator app
 * [SSO](https://en.wikipedia.org/wiki/Single_sign-on) = Single Sign-On
@@ -139,6 +137,9 @@ Example use cases: Establishing a secure connection, Signing content
     * mostly just used to establish shared private key for symmetric enryption
 * [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) = Advanced Encryption Standard
     * reasonably fast algorithm for encryption / decryption with a shared (symmetric) key
+* [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) = Pretty Good Privacy
+    * Standardized encryption software
+    * Relevance? Role? Relation to TLS, RSA and AES?
 
 ## Other
 
@@ -150,8 +151,5 @@ Example use cases: Establishing a secure connection, Signing content
 * [OpenSSL](https://en.wikipedia.org/wiki/OpenSSL)
     * Open-source library with implementations of TLS and cryptographic algorithms
     * Has virtually nothing to do with SSL anymore
-* [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) = Pretty Good Privacy
-    * Standardized encryption software
-    * Relevance? Role? Relation to TLS, RSA and AES?
 * [WAF](https://en.wikipedia.org/wiki/Web_application_firewall) = Web Application Firewall
 * [ACL](https://en.wikipedia.org/wiki/Access-control_list) = Access Control List
