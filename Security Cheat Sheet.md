@@ -82,10 +82,12 @@
 
 * [Kerberos](https://en.wikipedia.org/wiki/Kerberos_(protocol))
 
-    * rather complex protocol for mutual authentication between client and server (protects against man in the middle)
+    * rather complex protocol for mutual authentication (protects against man in the middle)
     * does not use public keys, only private keys
     * relies on existing trusted "key distribution center" to which network participants already have a secure connection
-    * Relation to TLS and RSA?? relevance?
+    * scalable selective access control through dedicated "ticket granting servers"
+    * standard network authentication tool, in particular in LANs
+    * central server might be a vulnarability in the sense that it knows the keys for all network connections and could be forced (by goverment, secret services etc.) to disclose the keys
 
 * [DSA](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm) = Digital Signature Algorithm
 
@@ -115,17 +117,20 @@
     * 3rd party gets an access token
     * different use cases or "OAuth flows"
     * rather [controversial](https://en.wikipedia.org/wiki/OAuth#Controversy), and not secure even in version 2.0
+* [OpenID](https://en.wikipedia.org/wiki/OpenID)
+    * open standard of a decentralized authentication protocol
+    * OpenID Connect protocol: a more clearly specified variant of OAuth exclusively for authentication
+* [OWASP](https://en.wikipedia.org/wiki/OWASP) = Open Web Application Security Project
 
 ## Hashing
 
 * [SHA](https://en.wikipedia.org/wiki/Secure_Hash_Algorithms) = Secure Hash Algorithm
-
     * Widely used hash function
-
+    
     * latest version SHA-3
-
+    
     * SHA-1 still used by git since there it's only used stochastically, not to defend against attacks
-
+    
 * [MD5](https://en.wikipedia.org/wiki/MD5) = message-digest algorithm 5
 
     * old hash function, not secure enough for cryptographic applications, but fast
