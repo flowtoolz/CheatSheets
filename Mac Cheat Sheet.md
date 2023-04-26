@@ -46,3 +46,24 @@ One of the oldest and most ridiculous bugs in Apple software is that Mail rules 
 * ⏎
 * ⌫
 * ↑ ↓ ← →
+
+## Install Ruby
+
+The preinstalled Ruby on macOS is typically out of date, and how to update it is a moving target. But it's often needed, for instance to properly intall and use cocoapods.
+
+Here are the steps that worked for me on April 26 on macOS 13.3.1 without ever having updated or installed Ruby on that system before:
+
+1. Install [Homebrew](https://brew.sh):
+    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+2. Add the homebrew path to the environment variable "PATH" by adding this line to ~/.zshrc (necessary so that RVM will find it):
+    `export PATH="$PATH:/opt/homebrew/bin"`
+3. [Install RVM](https://stackoverflow.com/questions/38194032/how-can-i-update-ruby-version-2-0-0-to-the-latest-version-in-mac-os-x-v10-10-yo) (Ruby Version Manager):
+    `curl -sSL https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable`
+4. Install the latest version of Ruby:
+    `rvm install ruby@latest`
+5. Select the latest Ruby version as the default version:
+    `rvm use ruby-3.0.0 --default` (replace "ruby-3.0.0" by your latest version)
+6. [Update the RubyGems system software](https://stackoverflow.com/questions/60631953/warning-the-running-version-of-bundler-is-older-than-the-version-that-created-t) (was necessary to use cocoapods):
+    `gem update —-system`
+7. Install specified gem dependencies (was necessary to use cocoapods):
+    `bundle install`
