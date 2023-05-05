@@ -53,10 +53,10 @@ gitty() {
 
     if [ "$changes" = "" ] # don't do shit without unstaged changes
     then
-        echo "🛑 No unstaged changes!!!"
+        echo "🛑 No unstaged changes"
     elif [ "$1" = "" ] # don't do shit without a message
     then
-        echo "🛑 Write a commit message!!!"
+        echo "🛑 No commit message"
     else
         add .
         commit -m $1
