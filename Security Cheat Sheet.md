@@ -72,7 +72,7 @@
 * [DSA](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm) = Digital Signature Algorithm
     * asymmetric encryption but only for signatures (?)
 
-### Authentication: Access Tokens
+### Authentication: Access Codes
 
 * [(Access-) Token](https://en.wikipedia.org/wiki/Access_token)
 * [PAT](https://en.wikipedia.org/wiki/Personal_access_token) = Personal access token
@@ -81,6 +81,7 @@
 * [API Key](https://en.wikipedia.org/wiki/API_key)
 * [Session ID](https://en.wikipedia.org/wiki/Session_ID)
 * [Cookie](https://en.wikipedia.org/wiki/HTTP_cookie)
+* [TOTP](https://en.wikipedia.org/wiki/Time-based_one-time_password)
 
 ### Authentication: Specific Topics
 
