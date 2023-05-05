@@ -76,8 +76,8 @@
 | Increase Font Size | ⌘= |
 | Decrease Font Size | ⌘- |
 | Cancel a running program/job/command | ⌃C |
-| Show auto completion (only in [iTerm](https://iterm2.com)) | ⌘; |
-| Open URL (only in [iTerm](https://iterm2.com)) | ⌘Click |
+| Show auto completion (only in [iTerm2](https://iterm2.com)) | ⌘; |
+| Open URL (only in [iTerm2](https://iterm2.com)) | ⌘Click |
 
 ## Configuration
 
@@ -99,12 +99,12 @@
   source ~/.zprofile
   ```
   
-* Open an in Finder selected folder in a new Terminal or iTerm tab via a shortcut:
+* Open an in Finder selected folder in a new Terminal or iTerm2 tab via a shortcut:
 
   1. Go to System Settings / Keyboard / Keyboard Shortcuts... / Services / Files and Folders
   2. Find the shortcut you want:
       * "New Terminal Tab at Folder" for Terminal
-      * "New iTerm2 Tab Here" for iTerm
+      * "New iTerm2 Tab Here" for iTerm2
   3. Double click on the key command (or on "none" if there is none)
   4. Press Ctrl+T (Shift+Cmd+T for example didn't work since it's used by Finder)
 
@@ -114,12 +114,12 @@
         1. Go to Settings / Profiles / The profile you use / Tab
         2. Under "Title" deselect everything except for "Working directory of document"
         
-    * iTerm (from [this comment](https://gist.github.com/phette23/5270658?permalink_comment_id=3020766#gistcomment-3020766)):
+    * iTerm2 (from [this comment](https://gist.github.com/phette23/5270658?permalink_comment_id=3020766#gistcomment-3020766)):
         1. Go to Settings / Profiles / The profile you use
         
-        2. Under "Basics" / "Title" make sure only "Session" is selected
+        2. Under "Basics" / "Title" make sure only "Session Name" is selected
         
-        3. Add this to ~/.zshrc:
+        3. Use the example scripts documented above or manually add this to ~/.zshrc:
             ```bash
             DISABLE_AUTO_TITLE="true"
             
@@ -129,8 +129,8 @@
             }
             ```
 
-* Avoid error "Operation not permitted" (for example with command "find") by giving Terminal/iTerm full disk access:
+* Avoid error "Operation not permitted" (for example with command "find") by giving Terminal/iTerm2 full disk access:
 
     1. Go to System Settings / Privacy & Security / Full Disk Access
-    2. Add or activate Terminal/iTerm in the list
+    2. Add or activate Terminal/iTerm2 in the list
     3. Relaunch Terminal/iTerm
