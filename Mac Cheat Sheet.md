@@ -6,6 +6,9 @@
 | --------- | ----------- |
 | Rename a selected file, folder or Numbers cell | ⌥⏎ |
 | Delete a selected file, folder or email | ⌘⌫ |
+| Open App Settings | ⌘, |
+| Quit app | ⌘Q |
+| Close window or tab | ⌘W |
 | Show/hide hidden files | ⌘⇧. (Cmd Shift Dot) |
 
 ## Special Characters (US Keyboard)
