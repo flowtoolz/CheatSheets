@@ -20,6 +20,16 @@
 | ß         | ⌥s                   |
 | •         | ⌥8                   |
 
+## Code Ligatures
+
+To get nice ligatures in code:
+
+* Install [Fira Code](https://fonts.google.com/specimen/Fira+Code)
+* Use it in Xcode, VSCode, Terminal, iTerm2 etc.
+* in iTerm2:
+  * Settings / Profile / your profile / Text / Font
+  * Also check the checkbox "Use ligatures" and select font weight medium
+
 ## App Defaults
 
 ... can be managed with the command line app [defaults](https://support.apple.com/en-gb/guide/terminal/apda49a1bb2-577e-4721-8f25-ffc0836f6997/mac).
