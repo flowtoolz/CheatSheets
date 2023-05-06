@@ -69,11 +69,11 @@ Here are the steps that worked for me on April 26 on macOS 13.3.1 without ever h
 1. Install [Homebrew](https://brew.sh):
    
     `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-2. Add the homebrew path to the environment variable "PATH" by adding this line to ~/.zshrc (necessary so that RVM will find Homebrew). Then restart your terminal:
+2. Add the homebrew path to the environment variable "PATH" by adding this line to ~/.zshrc (necessary so that RVM will find Homebrew). Then restart your shell session (or terminal app):
    
     `export PATH="$PATH:/opt/homebrew/bin"`
     
-3. [Install RVM](https://stackoverflow.com/questions/38194032/how-can-i-update-ruby-version-2-0-0-to-the-latest-version-in-mac-os-x-v10-10-yo) (Ruby Version Manager):
+3. [Install RVM](https://stackoverflow.com/questions/38194032/how-can-i-update-ruby-version-2-0-0-to-the-latest-version-in-mac-os-x-v10-10-yo) (Ruby Version Manager), then restart your shell session (or terminal app):
    
     `curl -sSL https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable`
     
