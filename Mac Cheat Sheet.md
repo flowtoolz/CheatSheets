@@ -67,28 +67,38 @@ The preinstalled Ruby on macOS is typically out of date, and how to update it is
 Here are the steps that worked for me on April 26 on macOS 13.3.1 without ever having updated or installed Ruby on that system before:
 
 1. Install [Homebrew](https://brew.sh):
-   
+
     `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 2. Add the homebrew path to the environment variable "PATH" by adding this line to ~/.zshrc (necessary so that RVM will find Homebrew). Then restart your shell session (or terminal app):
-   
+
     `export PATH="$PATH:/opt/homebrew/bin"`
-    
+
 3. [Install RVM](https://stackoverflow.com/questions/38194032/how-can-i-update-ruby-version-2-0-0-to-the-latest-version-in-mac-os-x-v10-10-yo) (Ruby Version Manager), then restart your shell session (or terminal app):
-   
+
     `curl -sSL https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable`
-    
+
 4. Install the latest version of Ruby:
-   
+
     `rvm install ruby@latest`
-    
+
 5. Select the latest Ruby version as the default version:
-   
-    `rvm use ruby-3.0.0 --default` (replace "ruby-3.0.0" by your latest version)
-    
+
+    `rvm use ruby-3.1.1 --default` (replace "ruby-3.1.1" by your latest version)
+
 6. [Update the RubyGems system software](https://stackoverflow.com/questions/60631953/warning-the-running-version-of-bundler-is-older-than-the-version-that-created-t) (was necessary to use cocoapods):
-   
+
     `gem update —-system`
+
+## Install Cocoapods
+
+1. After selecting a new Ruby version as described above, it is necessary to (re-)install Cocoapods, since Cocoapods is installed for each version of Ruby in a location like `/Users/<user name>/.rvm/rubies/ruby-3.1.1/bin/pod`:
+
+    `sudo gem install cocoapods`
     
-7. Install specified gem dependencies (was necessary to use cocoapods):
-   
+2. Before installing the cocoapods of a specific project, you may have to install its Ruby gems, assuming there is a `Gemfile` in the project folder. Run this within the project folder:
+
     `bundle install`
+
+3. Finally install the Cocoapods of the project (within the project folder, where the `Podfile`is):
+
+    `pod install`
