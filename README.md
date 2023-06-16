@@ -5,7 +5,7 @@
 * [Xcode](Xcode%20Cheat%20Sheet.md)
 * [Code Signing](Code%20Signing%20Cheat%20Sheet.md)
 * [Swift CLI](Swift%20Cheat%20Sheet.md)
-* [xcrun](xcrun.md)
+* [Xcode Command Line Tools](Xcode%20Command%20Line%20Tools%20Cheat%20Sheet.md)
 
 ## Cross Platform
 
