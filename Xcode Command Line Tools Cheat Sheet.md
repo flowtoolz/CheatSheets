@@ -11,3 +11,4 @@
 ## xcode-select
 
 * Select default Xcode installation like so: `xcode-select --switch /Applications/Xcode.app`
+    * (Possibly has to be run with `sudo` ...)
