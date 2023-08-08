@@ -10,6 +10,8 @@ For illustration, we look at an idealized general scenario in which one team of 
 
 ![](code-signing/Code_Signing_Fuckery.jpg)
 
+## Essentials
+
 * Developer Account
   * Identified by a team ID, representing the entire development team within the company.
   * All the other concepts, including developers and apps, are associated with this one team ID.
@@ -49,3 +51,18 @@ For illustration, we look at an idealized general scenario in which one team of 
 
 	macOS system report shows the difference:
 	![](code-signing/uuid-vs-udid.png)
+
+## Other Aspects
+
+* Role-Based Access Control
+  * Assign roles (Admin, Member, etc.) to team members to control permissions related to certificates and profiles management.
+* Revocation and Renewal
+  * Plan for certificate expiration and renewal. Remember, revoking a certificate affects all associated profiles and signed apps.
+* Continuous Integration Systems
+  * If using CI systems like Jenkins or GitLab, consider automating certificate and profile handling using tools like Fastlane.
+* Two-Factor Authentication
+  * Be aware of two-factor authentication when sharing accounts across developers. It might require additional coordination.
+* App-Specific Passwords
+  * App-specific passwords can give people (or the CI) selective access to the developer account, for example so they can manage and release only one specific app.
+* Notarization for macOS Apps
+  * If distributing macOS apps outside the App Store, understand the notarization process, which provides an extra layer of security.
