@@ -25,9 +25,9 @@ For illustration, we look at an idealized general scenario in which one team of 
     * Example: Codeface macOS Development Profile
   * Each profile connects an app ID with one of the two certificates (development / distribution).
   * Development profiles can also be associated with specific test devices.
-  * When creating a distribution profile, the unspecific option "App Store" typically refers to the iOS App Store.
+  * When creating a distribution profile, the unspecific option "App Store" refers to the iOS App Store.
   * Developers' test devices (or development machines for macOS) must be added to the profile. This doesn't require others to reinstall the profile, as long as they don't use the newly registered device.
-  * The same signing identity (certificate) may be referenced by multiple profiles. For example, device tests might use a dedicated profile that contains the corresponing test devices.
+  * The same signing identity (certificate) may be referenced by multiple profiles. For example, device tests might use a dedicated profile that contains the corresponding test devices.
 
 * Test Devices
   * To run and debug on an actual device (iPhone, MacBook, etc.), it must be registered and associated with the **development** profile.
@@ -35,8 +35,10 @@ For illustration, we look at an idealized general scenario in which one team of 
   * With a Mac, be sure to register its **UDID** and not its UUID.
 
 * Tips
-  * Ensure there are no expired or unused/unintended profiles and certificates installed, as these can confuse Xcode (Keychain Access app, and system settings -> Privacy & Security -> Profiles -> provisioning).
-  * Clean builds, restarting Xcode, or even rebooting the Mac may sometimes be necessary for Xcode to recognize newly installed certificates or resolve related issues.
+  * Ensure there are no expired or unused/unintended profiles and certificates installed, as these can confuse Xcode:
+    * Keychain Access app
+    * System settings -> Privacy & Security -> Profiles -> Provisioning
+  * Clean builds, restarting Xcode, or even rebooting the Mac is sometimes be necessary for Xcode to recognize newly installed certificates or resolve related issues.
 
 
 ## Pitfalls
