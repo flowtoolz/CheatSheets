@@ -109,7 +109,13 @@ Some common GitHub workflows rely on features that are **not** part of git but o
 
 ## Setup
 
-### Shell
+### Shell Authentication
+
+* GitHub and most other git hosts do not support password authentication anymore, so on the command line you'll authenticate either via a PAT or via an SSH key.
+
+* When using a PAT: To cache/remember the PAT (password), run `git config --global credential.helper osxkeychain`. This way you don't need to enter the PAT everytime git needs to authenticate.
+
+### Shell Commands
 
 Have a look at [this shell customization script](shell-customization-scripts/make-the-shell-great-again.sh). It offers some conveniences for git. 
 
