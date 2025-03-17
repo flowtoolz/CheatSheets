@@ -18,7 +18,7 @@ For illustration, we look at an idealized general scenario in which one team of 
 * Certificates (Signing Identities)
   * Only two certificates are needed: Development and Distribution. These are used to sign **all apps** on **all machines**. Install them, along with their private keys, on each developer's machine.
   * Universal "**Apple** Development" and "**Apple** Distribution" certificates cover both macOS and iOS.
-  * A developer can generate a certificate on their machine, storing it locally in Keychain Access. The certificate, along with its private key, must be exported and securely shared with the team. A private git repo is generally not considered secure enough for this purpose.
+  * A developer can generate a certificate on their machine, storing it locally in Keychain Access. The certificate, along with its private key, must be exported and securely shared with the team. A private git repo is generally not considered secure enough for this purpose. All this applies even to the development certificate.
   * Certificates are typically installed in the "Login" keychain, but using "iCloud" could be useful for a developer working across multiple machines.
 * Profiles
   * One profile per app, platform, and build type (development / distribution) is required.
