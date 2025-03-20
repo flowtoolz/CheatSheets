@@ -64,7 +64,7 @@ One of the oldest and most ridiculous bugs in Apple software is that Mail rules 
 
 The preinstalled Ruby on macOS is typically out of date, and how to update it is a moving target. But it's often needed, for instance to properly intall and use cocoapods.
 
-Here are the steps that worked for me on April 26 on macOS 13.3.1 without ever having updated or installed Ruby on that system before:
+Here are the steps that worked for me without ever having updated or installed Ruby on that system before:
 
 1. Install [Homebrew](https://brew.sh):
 
