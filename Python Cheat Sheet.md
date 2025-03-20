@@ -215,7 +215,7 @@ The Python virtual environment (VE) partially plays the role of a dependency man
 5. activate (enter) VE: `source venv/bin/activate`
 6. update pip: `pip install --upgrade pip`
 7. install packages
-    - if requirements.txt exists: `pip install -r requirements.txt`
+    - if requirements.txt exists:
         - install packages: `pip install -r requirements.txt`
     - if requirements.txt doesn't exist:
         - install packages: `pip install -r package1 package2 package3`
