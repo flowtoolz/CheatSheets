@@ -2,26 +2,26 @@
 
 ## Keyboard Shortcuts
 
-| Intent | Key Command |
-| --------- | ----------- |
-| Rename a selected file, folder or Numbers cell | ⌥⏎ |
-| Delete a selected file, folder or email | ⌘⌫ |
-| Open App Settings | ⌘, |
-| Quit app | ⌘Q |
-| Close window or tab | ⌘W |
-| Show/hide hidden files | ⌘⇧. (Cmd Shift Dot) |
+| Intent                                         | Key Command           |
+| ---------------------------------------------- | --------------------- |
+| Rename a selected file, folder or Numbers cell | ⌥⏎                  |
+| Delete a selected file, folder or email        | ⌘⌫                  |
+| Open App Settings                              | ⌘,                   |
+| Quit app                                       | ⌘Q                   |
+| Close window or tab                            | ⌘W                   |
+| Show/hide hidden files                         | ⌘⇧. (Cmd Shift Dot) |
 
 ## Special Characters (US Keyboard)
 
-| Character | Key Command          |
-| --------- | -------------------- |
-| ä         | ⌥u and then type "a" |
-| €         | ⌥⇧2                  |
-| –         | ⌥-                   |
-| —         | ⌥⇧-                  |
-| …         | ⌥:                   |
-| ß         | ⌥s                   |
-| •         | ⌥8                   |
+| Character | Key Command           |
+| --------- | --------------------- |
+| ä        | ⌥u and then type "a" |
+| €        | ⌥⇧2                 |
+| –        | ⌥-                   |
+| —        | ⌥⇧-                 |
+| …        | ⌥:                   |
+| ß        | ⌥s                   |
+| •        | ⌥8                   |
 
 ## Code Ligatures
 
@@ -32,6 +32,11 @@ To get nice ligatures in code:
 * in iTerm2:
   * Settings / Profile / your profile / Text / Font
   * Also check the checkbox "Use ligatures" and select font weight medium
+
+## Anonymize Device Names
+
+- **macOS**: System Settings > General > Sharing > Local hostname
+- **iOS**: Settings > General > About > Name
 
 ## App Defaults
 
@@ -47,7 +52,6 @@ This is the best option to test the first launch of a macOS app under developmen
 One of the oldest and most ridiculous bugs in Apple software is that Mail rules don't work – still in 2023.
 
 * Rules are not applied automatically when the IMAP flag "seen" is already set when the email arrives in Mail. For example, spam filters or rules at your email service provider might set this flag.
-
 * A work around is discussed [at superuser.com](https://superuser.com/questions/33177/apple-mail-doesnt-apply-rules-unless-i-choose-apply-rules-manually)
 
 ## Key Symbols
@@ -68,41 +72,35 @@ Here are the steps that worked for me without ever having updated or installed R
 
 1. Install [Homebrew](https://brew.sh):
 
-    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+   `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 2. Add the homebrew path to the environment variable "PATH" by adding this line to ~/.zshrc (necessary so that RVM will find Homebrew). Then restart your shell session (or terminal app):
 
-    `export PATH="$PATH:/opt/homebrew/bin"`
-
+   `export PATH="$PATH:/opt/homebrew/bin"`
 3. [Install RVM](https://stackoverflow.com/questions/38194032/how-can-i-update-ruby-version-2-0-0-to-the-latest-version-in-mac-os-x-v10-10-yo) (Ruby Version Manager), then restart your shell session (or terminal app):
 
-    `curl -sSL https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable`
-
+   `curl -sSL https://raw.githubusercontent.com/rvm/rvm/master/binscripts/rvm-installer | bash -s stable`
 4. Install the latest version of Ruby:
 
-    `rvm install ruby@latest`
-
+   `rvm install ruby@latest`
 5. Select the latest Ruby version as the default version:
 
-    `rvm use ruby-3.1.1 --default` (replace "ruby-3.1.1" by your latest version)
-
+   `rvm use ruby-3.1.1 --default` (replace "ruby-3.1.1" by your latest version)
 6. [Update the RubyGems system software](https://stackoverflow.com/questions/60631953/warning-the-running-version-of-bundler-is-older-than-the-version-that-created-t) (was necessary to use cocoapods):
 
-    `gem update —-system`
+   `gem update —-system`
 
 ## Install Cocoapods
 
-1. After selecting a new Ruby version as described above, it is necessary to (re-)install Cocoapods, since Cocoapods is installed for each version of Ruby in a location like `/Users/<user name>/.rvm/rubies/ruby-3.1.1/bin/pod`. Also, and in particular when installing a specific version of Cocoapods, it's best to first deinstall existing Cocoapods installations (and their dependencies): 
+1. After selecting a new Ruby version as described above, it is necessary to (re-)install Cocoapods, since Cocoapods is installed for each version of Ruby in a location like `/Users/<user name>/.rvm/rubies/ruby-3.1.1/bin/pod`. Also, and in particular when installing a specific version of Cocoapods, it's best to first deinstall existing Cocoapods installations (and their dependencies):
 
-    `gem uninstall cocoapods` 
-    
-    `gem install cocoapods`
-    
+   `gem uninstall cocoapods`
+
+   `gem install cocoapods`
 2. Before installing the cocoapods of a specific project, you may have to install its Ruby gems if there is a `Gemfile` in the project folder. Run this within the project folder:
 
-    `bundle install`
+   `bundle install`
 
-    Note: If the Gemfile specifies a version for Cocoapods, it's best to have a compatible version installed (See step 1).
-
+   Note: If the Gemfile specifies a version for Cocoapods, it's best to have a compatible version installed (See step 1).
 3. Finally install the Cocoapods of the project (within the project folder, where the `Podfile`is):
 
-    `pod install`
+   `pod install`
