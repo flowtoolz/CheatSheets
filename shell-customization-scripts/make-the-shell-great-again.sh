@@ -48,20 +48,17 @@ alias config="git config"
 alias init="git init"
 
 # accelerate most basic git use: add, commit and push all unstaged changes
-gitty() {
-    changes=$(diff)
+gitty () {
+    changes=$(status --porcelain)
 
-    if [ "$changes" = "" ] # don't do shit without unstaged changes
-    then
-        echo "🛑 No unstaged changes"
-    elif [ "$1" = "" ] # don't do shit without a message
-    then
+    if [ -z "$changes" ]; then
+        echo "🛑 No changes to commit"
+    elif [ -z "$1" ]; then
         echo "🛑 No commit message"
     else
         add .
-        commit -m $1
+        commit -m "$1"
         push
-
         lastCommit=$(log --oneline -1)
         echo "✅ Pushed $lastCommit"
     fi
