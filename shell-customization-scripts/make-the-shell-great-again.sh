@@ -20,8 +20,8 @@ precmd() {
   echo -ne "\e]1;${PWD##*/}\a"
 }
 
-# make VS Code the default editor, assuming the VS Code command is installed
-export EDITOR="code -w" 
+# make Cursor the default editor, assuming the Cursor command is installed
+export EDITOR="cursor -w"
 
 # aliases that allow omitting "git " with git commands
 alias status="git status"
